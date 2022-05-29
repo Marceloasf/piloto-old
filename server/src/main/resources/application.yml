@@ -1,0 +1,18 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/db.changelog-master.xml
+  jpa:
+    hibernate.ddl-auto: none
+    generate-ddl: false
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    database-platform: org.hibernate.dialect.H2Dialect
+server:
+  port: 8080
